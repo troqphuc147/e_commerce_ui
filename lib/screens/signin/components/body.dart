@@ -1,6 +1,7 @@
 import 'package:e_commerce_ui/components/list_social_button.dart';
 import 'package:e_commerce_ui/constants.dart';
-import 'package:e_commerce_ui/screens/login/components/login_form.dart';
+import 'package:e_commerce_ui/screens/signin/components/login_form.dart';
+import 'package:e_commerce_ui/screens/signup/signup_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -36,14 +37,14 @@ class Body extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
               const Text(
-                "Login",
+                "Sign in",
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.left,
               ),
-              SizedBox(height: SizeConfig.screenHeight * 0.08),
+              SizedBox(height: SizeConfig.screenHeight * 0.06),
               const LoginForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.02),
               Row(
@@ -65,8 +66,28 @@ class Body extends StatelessWidget {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.05),
-              DefautlButton(text: "LOGIN"),
-              SizedBox(height: SizeConfig.screenHeight * 0.1),
+              DefautlButton(text: "Sign in"),
+              SizedBox(height: SizeConfig.screenHeight * 0.01),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("You don't have account?   "),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignUpScreen()));
+                      },
+                      child: const Text(
+                        " Sign up ",
+                        style: TextStyle(
+                            color: Color(0xff55a9ff),
+                            decoration: TextDecoration.underline),
+                      )),
+                ],
+              ),
+              SizedBox(height: SizeConfig.screenHeight * 0.075),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
