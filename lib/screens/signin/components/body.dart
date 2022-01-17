@@ -1,5 +1,6 @@
 import 'package:e_commerce_ui/components/list_social_button.dart';
 import 'package:e_commerce_ui/constants.dart';
+import 'package:e_commerce_ui/screens/forgot_password/forgot_password_screen.dart';
 import 'package:e_commerce_ui/screens/signin/components/login_form.dart';
 import 'package:e_commerce_ui/screens/signup/signup_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -52,7 +53,13 @@ class Body extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ForgotPasswordScreen()));
+                      },
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: const [

@@ -33,11 +33,11 @@ TextTheme lightTextTheme(){
   return const TextTheme(
     bodyText1:  TextStyle(
       fontFamily: "Metropolis",
-      color: Color(0xff222222),
+      color: Color(0xff151515),
     ),
     bodyText2:  TextStyle(
       fontFamily: "Metropolis",
-      color: Color(0xff222222),
+      color: Color(0xff151515),
     ),
   );
 }
