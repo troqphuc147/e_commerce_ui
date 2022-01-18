@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 const kEmailNullError = "Email can't empty";
 const kPasswordNullError = "Password can't empty";
 const kPasswordSort = "Password must longer than 8 digits";
-const kPrimaryColor = Color(0xFFFF7643);
+const kPrimaryColor = Color(0xFFFD5A1E);
+const kPrimarySecondColor = Color(0xFF9B9B9B);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,

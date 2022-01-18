@@ -1,6 +1,7 @@
 import 'package:e_commerce_ui/components/list_social_button.dart';
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/forgot_password/forgot_password_screen.dart';
+import 'package:e_commerce_ui/screens/home/home_screen.dart';
 import 'package:e_commerce_ui/screens/signin/components/login_form.dart';
 import 'package:e_commerce_ui/screens/signup/signup_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -73,7 +74,15 @@ class Body extends StatelessWidget {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.05),
-              DefautlButton(text: "Sign in"),
+              DefautlButton(
+                text: "Sign in",
+                onPress: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()));
+                },
+              ),
               SizedBox(height: SizeConfig.screenHeight * 0.01),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

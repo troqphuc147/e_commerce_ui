@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme() {
   return ThemeData(
-    scaffoldBackgroundColor: const Color(0xfff9f9f9),
+    scaffoldBackgroundColor: const Color(0xfff5f4f4),
     textTheme: lightTextTheme(),
     appBarTheme: lightAppbarTheme(),
     inputDecorationTheme: inputDecorationTheme(),

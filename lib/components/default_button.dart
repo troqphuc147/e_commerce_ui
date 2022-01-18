@@ -14,7 +14,7 @@ class _DefautlButtonState extends State<DefautlButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: SizeConfig.screenHeight * 0.065,
+      height: getProportionateScreenWidth(48),
       width: double.infinity,
       child: TextButton(
         style: TextButton.styleFrom(
@@ -22,9 +22,11 @@ class _DefautlButtonState extends State<DefautlButton> {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(45))),
         child: Text(
-          widget.text,
-          style: const TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
+          widget.text.toUpperCase(),
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: getProportionateScreenWidth(14),
+              fontWeight: FontWeight.w600),
         ),
         onPressed: widget.onPress,
       ),
