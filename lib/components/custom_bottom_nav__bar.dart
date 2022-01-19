@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
+import 'package:e_commerce_ui/screens/bag/bag_screen.dart';
 import 'package:e_commerce_ui/screens/home/home_screen.dart';
 import 'package:e_commerce_ui/screens/shop/shop_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -66,7 +67,12 @@ class CustomBottomNavBar extends StatelessWidget {
                       fit: BoxFit.cover,
                     )),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BagScreen()));
+                    },
                     icon: SvgPicture.asset(
                       "assets/icons/bag.svg",
                       color: MenuState.bag == selectedMenuState

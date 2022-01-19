@@ -18,24 +18,32 @@ class _LikeButtonState extends State<LikeButton> {
       height: getProportionateScreenWidth(36),
       width: getProportionateScreenWidth(36),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-      ),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(50),
+          boxShadow: const [
+            BoxShadow(
+              offset: Offset(0, 4),
+              color: Color(0xffe8e8e8),
+            )
+          ]),
       child: Center(
-        child: IconButton(
-            padding: EdgeInsets.zero,
-            onPressed: () {
-              setState(() {
-                like != like;
-              });
-            },
-            icon: SvgPicture.asset(
-              "assets/icons/heart.svg",
-              color: like ? kPrimaryColor : Colors.white,
-              fit: BoxFit.cover,
-              height: getProportionateScreenWidth(36),
-              width: getProportionateScreenWidth(36),
-            )),
-      ),
+          child: IconButton(
+              padding: EdgeInsets.zero,
+              onPressed: () {
+                setState(() {
+                  like = !like;
+                });
+              },
+              iconSize: getProportionateScreenWidth(20),
+              icon: like
+                  ? const Icon(
+                      Icons.favorite,
+                      color: kPrimaryColor,
+                    )
+                  : const Icon(
+                      Icons.favorite_outline,
+                      color: kPrimarySecondColor,
+                    ))),
     );
   }
 }
