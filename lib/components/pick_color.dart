@@ -3,15 +3,15 @@ import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PickSize extends StatefulWidget {
-  const PickSize({Key? key}) : super(key: key);
+class PickColor extends StatefulWidget {
+  const PickColor({Key? key}) : super(key: key);
 
   @override
-  _PickSizeState createState() => _PickSizeState();
+  _PickColorState createState() => _PickColorState();
 }
 
-class _PickSizeState extends State<PickSize> {
-  String size = "Size";
+class _PickColorState extends State<PickColor> {
+  Color cl = Colors.black;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,12 +27,22 @@ class _PickSizeState extends State<PickSize> {
             border: Border.all(color: kSecondaryColor, width: 1.5),
             borderRadius: BorderRadius.circular(15)),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              size,
+              'Color: ',
               style: TextStyle(fontSize: getProportionateScreenWidth(14)),
             ),
+            Container(
+              height: getProportionateScreenWidth(20),
+              width: getProportionateScreenWidth(20),
+              decoration: BoxDecoration(
+                  color: cl,
+                  border: Border.all(
+                      color:
+                          cl == Colors.white ? Colors.black : Colors.white)),
+            ),
+            const Spacer(),
             Icon(
               Icons.arrow_drop_down_outlined,
               color: Colors.black,
@@ -74,7 +84,7 @@ class _PickSizeState extends State<PickSize> {
                     height: getProportionateScreenWidth(15),
                   ),
                   Text(
-                    "Select size",
+                    "Select Color",
                     style: TextStyle(
                         fontSize: getProportionateScreenWidth(18),
                         fontWeight: FontWeight.w600),
@@ -85,48 +95,57 @@ class _PickSizeState extends State<PickSize> {
                   Wrap(
                     alignment: WrapAlignment.start,
                     children: [
-                      ProductSize(
-                          s: "XS",
-                          size: size,
+                      ProductColor(
+                          newCl: Colors.black,
+                          cl: cl,
                           onPressed: () {
                             setState(() {
-                              size = "Size: XS";
+                              cl = Colors.black;
                             });
                             Navigator.pop(context);
                           }),
-                      ProductSize(
-                          s: "S",
-                          size: size,
+                      ProductColor(
+                          newCl: Colors.white,
+                          cl: cl,
                           onPressed: () {
                             setState(() {
-                              size = "Size: S";
+                              cl = Colors.white;
                             });
                             Navigator.pop(context);
                           }),
-                      ProductSize(
-                          s: "M",
-                          size: size,
+                      ProductColor(
+                          newCl: Colors.yellow,
+                          cl: cl,
                           onPressed: () {
                             setState(() {
-                              size = "Size: M";
+                              cl = Colors.yellow;
                             });
                             Navigator.pop(context);
                           }),
-                      ProductSize(
-                          s: "L",
-                          size: size,
+                      ProductColor(
+                          newCl: Colors.red,
+                          cl: cl,
                           onPressed: () {
                             setState(() {
-                              size = "Size: L";
+                              cl = Colors.red;
                             });
                             Navigator.pop(context);
                           }),
-                      ProductSize(
-                          s: "XL",
-                          size: size,
+                      ProductColor(
+                          newCl: Colors.orange,
+                          cl: cl,
                           onPressed: () {
                             setState(() {
-                              size = "Size: XL";
+                              cl = Colors.orange;
+                            });
+                            Navigator.pop(context);
+                          }),
+                      ProductColor(
+                          newCl: Colors.green,
+                          cl: cl,
+                          onPressed: () {
+                            setState(() {
+                              cl = Colors.green;
                             });
                             Navigator.pop(context);
                           }),
@@ -172,20 +191,23 @@ class _PickSizeState extends State<PickSize> {
   }
 }
 
-class ProductSize extends StatefulWidget {
-  final String s;
-  final String size;
+class ProductColor extends StatefulWidget {
+  final Color newCl;
+  final Color cl;
   final VoidCallback onPressed;
 
-  const ProductSize(
-      {Key? key, required this.s, required this.onPressed, required this.size})
+  const ProductColor(
+      {Key? key,
+      required this.newCl,
+      required this.onPressed,
+      required this.cl})
       : super(key: key);
 
   @override
-  State<ProductSize> createState() => _ProductSizeState();
+  State<ProductColor> createState() => _ProductColorState();
 }
 
-class _ProductSizeState extends State<ProductSize> {
+class _ProductColorState extends State<ProductColor> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -197,21 +219,13 @@ class _ProductSizeState extends State<ProductSize> {
             horizontal: getProportionateScreenWidth(10),
             vertical: getProportionateScreenWidth(8)),
         decoration: BoxDecoration(
-          border: Border.all(color: kSecondaryColor),
-          color: Colors.white,
+          border: Border.all(
+              color: widget.newCl == widget.cl
+                  ? kPrimaryColor
+                  : kPrimarySecondColor,
+              width: 1.5),
+          color: widget.newCl,
           borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(
-          child: Text(
-            widget.s,
-            style: TextStyle(
-              fontWeight: widget.size == "Size: " + widget.s
-                  ? FontWeight.w900
-                  : FontWeight.normal,
-              color: Colors.black,
-              fontSize: getProportionateScreenWidth(14),
-            ),
-          ),
         ),
       ),
     );
