@@ -30,7 +30,7 @@ class _PickColorState extends State<PickColor> {
           //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Color: ',
+              'Color:  ',
               style: TextStyle(fontSize: getProportionateScreenWidth(14)),
             ),
             Container(
@@ -39,8 +39,8 @@ class _PickColorState extends State<PickColor> {
               decoration: BoxDecoration(
                   color: cl,
                   border: Border.all(
-                      color:
-                          cl == Colors.white ? Colors.black : Colors.white)),
+                      color: kPrimarySecondColor),
+              ),
             ),
             const Spacer(),
             Icon(
@@ -98,6 +98,7 @@ class _PickColorState extends State<PickColor> {
                       ProductColor(
                           newCl: Colors.black,
                           cl: cl,
+                          text: "Black",
                           onPressed: () {
                             setState(() {
                               cl = Colors.black;
@@ -107,6 +108,7 @@ class _PickColorState extends State<PickColor> {
                       ProductColor(
                           newCl: Colors.white,
                           cl: cl,
+                          text: "White",
                           onPressed: () {
                             setState(() {
                               cl = Colors.white;
@@ -114,17 +116,19 @@ class _PickColorState extends State<PickColor> {
                             Navigator.pop(context);
                           }),
                       ProductColor(
-                          newCl: Colors.yellow,
+                          newCl: Colors.purple,
                           cl: cl,
+                          text: "Purple",
                           onPressed: () {
                             setState(() {
-                              cl = Colors.yellow;
+                              cl = Colors.purple;
                             });
                             Navigator.pop(context);
                           }),
                       ProductColor(
                           newCl: Colors.red,
                           cl: cl,
+                          text: "Red",
                           onPressed: () {
                             setState(() {
                               cl = Colors.red;
@@ -134,6 +138,7 @@ class _PickColorState extends State<PickColor> {
                       ProductColor(
                           newCl: Colors.orange,
                           cl: cl,
+                          text: "Orange",
                           onPressed: () {
                             setState(() {
                               cl = Colors.orange;
@@ -143,6 +148,7 @@ class _PickColorState extends State<PickColor> {
                       ProductColor(
                           newCl: Colors.green,
                           cl: cl,
+                          text: "Green",
                           onPressed: () {
                             setState(() {
                               cl = Colors.green;
@@ -167,7 +173,7 @@ class _PickColorState extends State<PickColor> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Size infor',
+                            'Require more color',
                             style: TextStyle(
                                 fontSize: getProportionateScreenWidth(14)),
                           ),
@@ -194,13 +200,15 @@ class _PickColorState extends State<PickColor> {
 class ProductColor extends StatefulWidget {
   final Color newCl;
   final Color cl;
+  final String text;
   final VoidCallback onPressed;
 
   const ProductColor(
       {Key? key,
       required this.newCl,
       required this.onPressed,
-      required this.cl})
+      required this.cl,
+      required this.text})
       : super(key: key);
 
   @override
@@ -215,17 +223,34 @@ class _ProductColorState extends State<ProductColor> {
       child: Container(
         height: getProportionateScreenWidth(40),
         width: getProportionateScreenWidth(100),
-        margin: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(10),
-            vertical: getProportionateScreenWidth(8)),
-        decoration: BoxDecoration(
-          border: Border.all(
-              color: widget.newCl == widget.cl
-                  ? kPrimaryColor
-                  : kPrimarySecondColor,
-              width: 1.5),
-          color: widget.newCl,
-          borderRadius: BorderRadius.circular(10),
+        child: Row(
+          children: [
+            Container(
+              height: getProportionateScreenWidth(20),
+              width: getProportionateScreenWidth(20),
+              padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(10),
+                  vertical: getProportionateScreenWidth(8)),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    color: widget.newCl == widget.cl
+                        ? kPrimaryColor
+                        : kPrimarySecondColor,
+                    width: 1.5),
+                color: widget.newCl,
+              ),
+            ),
+            Text(
+              "  " + widget.text,
+              style: TextStyle(
+                color: widget.newCl == Colors.white?Colors.black:widget.newCl,
+                fontSize: getProportionateScreenWidth(12),
+                fontWeight: widget.newCl == widget.cl
+                    ? FontWeight.w700
+                    : FontWeight.normal,
+              ),
+            )
+          ],
         ),
       ),
     );

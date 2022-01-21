@@ -148,7 +148,7 @@ class _PickSizeState extends State<PickSize> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Size infor',
+                            'Size detail',
                             style: TextStyle(
                                 fontSize: getProportionateScreenWidth(14)),
                           ),
