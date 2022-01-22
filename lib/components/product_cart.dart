@@ -93,7 +93,7 @@ class _ProductCardState extends State<ProductCard> {
                           Row(
                             children: [
                               RatingBar(
-                                initialRating: widget.product.rating / 2,
+                                initialRating: widget.product.getRating()/2,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
                                 itemCount: 5,
@@ -115,7 +115,7 @@ class _ProductCardState extends State<ProductCard> {
                               ),
                               Text(
                                 " (" +
-                                    widget.product.numOfVote.toString() +
+                                    widget.product.rating.length.toString() +
                                     ")",
                                 style: TextStyle(
                                     color: kPrimarySecondColor,

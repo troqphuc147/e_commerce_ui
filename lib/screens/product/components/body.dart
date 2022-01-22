@@ -3,6 +3,7 @@ import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/screens/product/components/header.dart';
 import 'package:e_commerce_ui/screens/product/components/product_detail.dart';
 import 'package:e_commerce_ui/screens/product/components/product_recommend.dart';
+import 'package:e_commerce_ui/screens/rating_and_review/rating_and_review_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _BodyState extends State<Body> {
         child: SingleChildScrollView(
       child: Column(
         children: [
-          Header(productInfor: productInfor),
+          Header(productInfor: widget.productInfor),
           SizedBox(
             height: getProportionateScreenWidth(20),
           ),
@@ -39,7 +40,16 @@ class _BodyState extends State<Body> {
           const Divider(
             thickness: 1.5,
           ),
-          const DefaultButton2(content: "Review and Rating"),
+          DefaultButton2(
+              content: "Review and Rating",
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RatingAndReview(
+                              productInfor: widget.productInfor,
+                            )));
+              }),
           const Divider(
             thickness: 1.5,
           ),

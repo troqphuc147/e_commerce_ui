@@ -8,11 +8,18 @@ class Product {
   final String nameProduct;
   final String nameShop;
   final String category;
-  final double rating;
-  final int numOfVote;
+  final List<int> rating;
   final String script;
   Product(this.id, this.image, this.price, this.salePrice, this.nameProduct,
-      this.nameShop, this.rating, this.numOfVote, this.category, this.script);
+      this.nameShop, this.rating, this.category, this.script);
+  double getRating() {
+    double sum = 0.0;
+    for (var element in rating) {
+      sum += element;
+    }
+    int l = rating.length;
+    return 2 * sum / l;
+  }
 }
 
 List<Product> listSaleProduct = [
@@ -23,8 +30,7 @@ List<Product> listSaleProduct = [
       12,
       "Evening Dress",
       "Dorothy Perkins",
-      10,
-      10,
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 5, 5, 4, 2, 1],
       "Short dress",
       "Short dress in soft cotton jersey with decorative buttons down the front and a wide, frill-trimmed square neckline with concealed elastication. Elasticated seam under the bust and short puff sleeves with a small frill trim."),
   Product(
@@ -34,8 +40,7 @@ List<Product> listSaleProduct = [
       19,
       "Sport Dress",
       "Sitlly",
-      10,
-      7,
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 5, 2, 1, 4],
       "Sport clothes",
       "Always bringing its A-game, sports giant PUMA is all about setting and smashing goals in its quest to be forever faster. Feeling motivated yet? Join the club. Packed with all our favourite picks, our PUMA at ASOS edit brings the brand’s MVPs to your rotation. From comfy-cool joggers, hoodies and sweatshirts to caps, bags and trainers, it’s all here to cop. Activewear gets levelled up too, with sweat-wicking tops, leggings and sports bras taking centre stage."),
   Product(
@@ -45,8 +50,7 @@ List<Product> listSaleProduct = [
       18,
       "Sport Dress",
       "Dorothy Perkins",
-      8,
-      8,
+      [5, 4, 3, 5, 5, 5, 5, 4, 4, 5, 3, 1, 4],
       "Sport clothes",
       "Godfather of the dad-trainer aesthetic, New Balance has been flexing its footwear and clothing credentials for over 100 years. The brand’s supportive running trainers are all the motivation you need, while its retro lifestyle shoes are your go-tos for added style props. Scroll everything from T-shirts, leggings and accessories in our New Balance at ASOS edit, plus training tops and sports bras in a range of slick colourways."),
 ];
@@ -58,8 +62,7 @@ List<Product> listNewProduct = [
       30,
       "Blouse",
       "OVS",
-      10,
-      5,
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 4],
       "Sport clothes",
       "Short dress in soft cotton jersey with decorative buttons down the front and a wide, frill-trimmed square neckline with concealed elastication. Elasticated seam under the bust and short puff sleeves with a small frill trim."),
   Product(
@@ -69,8 +72,7 @@ List<Product> listNewProduct = [
       10,
       "T-Shirt Sailing",
       "Mango Boy",
-      8.6,
-      9,
+      [5, 4, 5, 5, 5, 4, 5, 5, 5, 5, 4],
       "Sport clothes",
       "Always bringing its A-game, sports giant PUMA is all about setting and smashing goals in its quest to be forever faster. Feeling motivated yet? Join the club. Packed with all our favourite picks, our PUMA at ASOS edit brings the brand’s MVPs to your rotation. From comfy-cool joggers, hoodies and sweatshirts to caps, bags and trainers, it’s all here to cop. Activewear gets levelled up too, with sweat-wicking tops, leggings and sports bras taking centre stage."),
   Product(
@@ -80,8 +82,7 @@ List<Product> listNewProduct = [
       40,
       "Jeans",
       "Cool",
-      9.5,
-      10,
+      [5, 4, 3, 5, 5, 5, 5, 5, 5, 5, 4],
       "Sport clothes",
       "Godfather of the dad-trainer aesthetic, New Balance has been flexing its footwear and clothing credentials for over 100 years. The brand’s supportive running trainers are all the motivation you need, while its retro lifestyle shoes are your go-tos for added style props. Scroll everything from T-shirts, leggings and accessories in our New Balance at ASOS edit, plus training tops and sports bras in a range of slick colourways."),
 ];
@@ -95,5 +96,3 @@ class ProductInfor {
 
   ProductInfor(this.product);
 }
-
-ProductInfor productInfor = ProductInfor(listSaleProduct[1]);

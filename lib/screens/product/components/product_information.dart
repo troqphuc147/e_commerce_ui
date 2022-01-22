@@ -56,7 +56,7 @@ class _ProductInformationState extends State<ProductInformation> {
         Row(
           children: [
             RatingBar(
-              initialRating: widget.productInfor.product.rating / 2,
+              initialRating: widget.productInfor.product.getRating(),
               direction: Axis.horizontal,
               allowHalfRating: true,
               itemCount: 5,
@@ -77,7 +77,10 @@ class _ProductInformationState extends State<ProductInformation> {
               onRatingUpdate: (value) {},
             ),
             Text(
-              " (" + widget.productInfor.product.numOfVote.toString() + ")",
+              " (" +
+                  widget.productInfor.product.rating.length
+                      .toString() +
+                  ")",
               style: TextStyle(
                   color: kPrimarySecondColor,
                   fontSize: getProportionateScreenHeight(11)),

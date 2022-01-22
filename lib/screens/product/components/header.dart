@@ -22,14 +22,16 @@ class _HeaderState extends State<Header> {
         child: Row(
           children: [
             ...List.generate(
-                widget.productInfor.listImages.length,
+                widget.productInfor.listImages.length + 1,
                 (index) => Container(
                       height: getProportionateScreenWidth(413),
                       width: getProportionateScreenWidth(275),
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(
-                                widget.productInfor.listImages[index],
+                                index == 0
+                                    ? widget.productInfor.product.image
+                                    : widget.productInfor.listImages[index-1],
                               ),
                               fit: BoxFit.cover)),
                     ))
