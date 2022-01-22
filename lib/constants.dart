@@ -7,6 +7,7 @@ const kPasswordSort = "Password must longer than 8 digits";
 const kPrimaryColor = Color(0xFFDB3022);
 const kPrimarySecondColor = Color(0xFF9B9B9B);
 const kPrimaryLightColor = Color(0xFFFFECDF);
+const kBackgroundColor = Color(0xfff5f4f4);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,

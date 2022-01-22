@@ -20,6 +20,27 @@ class Product {
     int l = rating.length;
     return 2 * sum / l;
   }
+
+  List<int> getNumOfEachLevel() {
+    List<int> listNumOfEachLevelRating = [];
+    for (int i = 0; i < 5; i++) {
+      listNumOfEachLevelRating.add(0);
+    }
+    for (var element in rating) {
+      if (element == 1) {
+        listNumOfEachLevelRating[0] += 1;
+      } else if (element == 2) {
+        listNumOfEachLevelRating[1] += 1;
+      } else if (element == 3) {
+        listNumOfEachLevelRating[2] += 1;
+      } else if (element == 4) {
+        listNumOfEachLevelRating[3] += 1;
+      } else {
+        listNumOfEachLevelRating[4] += 1;
+      }
+    }
+    return listNumOfEachLevelRating;
+  }
 }
 
 List<Product> listSaleProduct = [

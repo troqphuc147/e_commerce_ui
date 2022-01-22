@@ -12,6 +12,7 @@ class RatingAndReview extends StatefulWidget {
 }
 
 class _RatingAndReviewState extends State<RatingAndReview> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
