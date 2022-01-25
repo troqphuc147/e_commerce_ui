@@ -56,7 +56,7 @@ class _ProductInformationState extends State<ProductInformation> {
         Row(
           children: [
             RatingBar(
-              initialRating: widget.productInfor.product.getRating(),
+              initialRating: widget.productInfor.product.getRating()/2,
               direction: Axis.horizontal,
               allowHalfRating: true,
               itemCount: 5,

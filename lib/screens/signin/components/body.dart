@@ -74,7 +74,7 @@ class Body extends StatelessWidget {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.05),
-              DefautlButton(
+              DefaultButton(
                 text: "Sign in",
                 onPress: () {
                   Navigator.pushReplacement(

@@ -2,15 +2,19 @@ import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
-class DefautlButton extends StatefulWidget {
+class DefaultButton extends StatefulWidget {
   final String text;
   final Function()? onPress;
-  DefautlButton({Key? key, required this.text, this.onPress}) : super(key: key);
+  DefaultButton({
+    Key? key,
+    required this.text,
+    this.onPress,
+  }) : super(key: key);
   @override
-  _DefautlButtonState createState() => _DefautlButtonState();
+  _DefaultButtonState createState() => _DefaultButtonState();
 }
 
-class _DefautlButtonState extends State<DefautlButton> {
+class _DefaultButtonState extends State<DefaultButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

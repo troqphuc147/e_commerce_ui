@@ -75,7 +75,7 @@ class _BodyState extends State<Body> {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.045),
-              DefautlButton(text: "Sign up"),
+              DefaultButton(text: "Sign up"),
               SizedBox(height: SizeConfig.screenHeight * 0.02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

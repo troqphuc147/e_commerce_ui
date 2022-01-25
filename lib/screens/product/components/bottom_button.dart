@@ -20,7 +20,7 @@ class _BottomButtonState extends State<BottomButton> {
         children: [
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: DefautlButton(text: "add to cart")),
+              child: DefaultButton(text: "add to cart")),
           SizedBox(
             height: getProportionateScreenWidth(20),
           ),

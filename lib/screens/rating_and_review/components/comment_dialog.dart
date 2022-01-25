@@ -3,6 +3,7 @@ import 'package:e_commerce_ui/models/Comment.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,9 +20,12 @@ class _CommentDialogState extends State<CommentDialog> {
   bool like = false;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: EdgeInsets.only(bottom: getProportionateScreenWidth(20)),
       width: double.infinity,
-      height: widget.comment.comment.length/45*40+40,
+      height:
+          widget.comment.comment.length / 42 * getProportionateScreenWidth(20) +
+              getProportionateScreenWidth(100),
       child: Stack(
         children: [
           Positioned(
@@ -40,6 +44,7 @@ class _CommentDialogState extends State<CommentDialog> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       widget.comment.customer.userName,

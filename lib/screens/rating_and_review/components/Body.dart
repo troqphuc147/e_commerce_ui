@@ -3,6 +3,7 @@ import 'package:e_commerce_ui/screens/rating_and_review/components/comment_view.
 import 'package:e_commerce_ui/screens/rating_and_review/components/rating_view.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Body extends StatefulWidget {
   final ProductInfor productInfor;
@@ -15,18 +16,13 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Padding(
-      padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            RatingView(productInfor: widget.productInfor,),
-            const CommentView(),
-          ],
+    return Column(
+      children: [
+        RatingView(
+          productInfor: widget.productInfor,
         ),
-      ),
-    ));
+        const CommentView(),
+      ],
+    );
   }
 }
