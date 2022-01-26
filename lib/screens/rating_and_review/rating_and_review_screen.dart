@@ -18,7 +18,7 @@ class RatingAndReview extends StatefulWidget {
 
 class _RatingAndReviewState extends State<RatingAndReview> {
   bool showAppBarTitle = false;
-  ScrollController _scrollController = new ScrollController();
+  final ScrollController _scrollController =  ScrollController();
   bool isScrollingDown = false;
   void myScroll() async {
     _scrollController.addListener(() {
@@ -50,6 +50,7 @@ class _RatingAndReviewState extends State<RatingAndReview> {
     myScroll();
   }
 
+  @override
   void dispose() {
     // TODO: implement dispose
     _scrollController.removeListener(() {});
@@ -113,15 +114,15 @@ class _RatingAndReviewState extends State<RatingAndReview> {
           ),
           backgroundColor: kPrimaryColor,
           onPressed: () {
-            show(BuildContext context) {
               showModalBottomSheet<void>(
                   backgroundColor: Colors.transparent,
                   context: context,
+                  isScrollControlled: true,
                   builder: (BuildContext context) {
-                    return const WriteReviewScreen();
+                    return  const WriteReviewScreen();
                   });
-            }
           },
         ));
   }
 }
+
