@@ -57,7 +57,7 @@ class _BodyState extends State<Body> {
           const Divider(
             thickness: 1.5,
           ),
-          const DefaultButton2(content: "Suport"),
+          const DefaultButton2(content: "Support"),
           const Divider(
             thickness: 1.5,
           ),

@@ -127,6 +127,7 @@ class _WriteReviewScreen extends State<WriteReviewScreen> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ...List.generate(
                             listImageFile != null ? listImageFile!.length : 0,

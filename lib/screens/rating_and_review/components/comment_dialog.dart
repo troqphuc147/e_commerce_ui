@@ -23,9 +23,12 @@ class _CommentDialogState extends State<CommentDialog> {
     return Container(
       margin: EdgeInsets.only(bottom: getProportionateScreenWidth(20)),
       width: double.infinity,
-      height:
-          widget.comment.comment.length / 42 * getProportionateScreenWidth(20) +
-              getProportionateScreenWidth(100),
+      height: ((widget.comment.comment.length ~/
+                      (getProportionateScreenWidth(267) /
+                          getProportionateScreenWidth(6.512))) +
+                  1) *
+              getProportionateScreenWidth(11 * getProportionateScreenWidth(1.48)) +
+          getProportionateScreenWidth(120),
       child: Stack(
         children: [
           Positioned(

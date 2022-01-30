@@ -18,7 +18,7 @@ class CustomBottomNavBar extends StatelessWidget {
       child: SafeArea(
           top: false,
           child: Container(
-            height: SizeConfig.screenHeight * 0.1,
+            height: getProportionateScreenWidth(80),
             decoration: const BoxDecoration(
               color: Color(0xffffffff),
               boxShadow: [
@@ -33,6 +33,7 @@ class CustomBottomNavBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 IconButton(
                     onPressed: () {
@@ -46,9 +47,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       color: MenuState.home == selectedMenuState
                           ? kPrimaryColor
                           : kPrimarySecondColor,
-                      height: SizeConfig.screenHeight * 0.052,
-                      width: SizeConfig.screenWidth * 0.08,
-                      fit: BoxFit.cover,
+                      height: getProportionateScreenWidth(42),
+                      width: getProportionateScreenWidth(30),
+                      fit: BoxFit.fitHeight,
                     )),
                 IconButton(
                     onPressed: () {
@@ -62,9 +63,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       color: MenuState.shop == selectedMenuState
                           ? kPrimaryColor
                           : kPrimarySecondColor,
-                      height: SizeConfig.screenHeight * 0.052,
+                      height: getProportionateScreenWidth(42),
                       width: SizeConfig.screenWidth * 0.08,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitHeight,
                     )),
                 IconButton(
                     onPressed: () {
@@ -78,9 +79,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       color: MenuState.bag == selectedMenuState
                           ? kPrimaryColor
                           : kPrimarySecondColor,
-                      height: SizeConfig.screenHeight * 0.052,
+                      height: getProportionateScreenWidth(42),
                       width: SizeConfig.screenWidth * 0.08,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitHeight,
                     )),
                 IconButton(
                     onPressed: () {},
@@ -89,9 +90,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       color: MenuState.favorite == selectedMenuState
                           ? kPrimaryColor
                           : kPrimarySecondColor,
-                      height: SizeConfig.screenHeight * 0.052,
+                      height: getProportionateScreenWidth(42),
                       width: SizeConfig.screenWidth * 0.112,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitHeight,
                     )),
                 IconButton(
                     onPressed: () {},
@@ -100,9 +101,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       color: MenuState.profile == selectedMenuState
                           ? kPrimaryColor
                           : kPrimarySecondColor,
-                      height: SizeConfig.screenHeight * 0.052,
+                      height: getProportionateScreenWidth(42),
                       width: SizeConfig.screenWidth * 0.08,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fitHeight,
                     )),
               ],
             ),

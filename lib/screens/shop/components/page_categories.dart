@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/models/category.dart';
+import 'package:e_commerce_ui/screens/product_with_category/product_with_category_screen.dart';
 import 'package:e_commerce_ui/screens/shop/components/header.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,18 @@ class _PageCategoriesState extends State<PageCategories> {
               height: getProportionateScreenWidth(20),
             ),
             const Header(content: "SUMMER SALES", subContent: "Up to 50% off"),
-            ...List.generate(widget.listCategory.length,
-                (index) => CategoryCart(category: widget.listCategory[index])),
+            ...List.generate(
+                widget.listCategory.length,
+                (index) => CategoryCart(
+                      category: widget.listCategory[index],
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ProductWithCategoryScreen()));
+                      },
+                    )),
             SizedBox(
               height: getProportionateScreenWidth(20),
             )

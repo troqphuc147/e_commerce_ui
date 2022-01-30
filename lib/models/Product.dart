@@ -117,3 +117,66 @@ class ProductInfor {
 
   ProductInfor(this.product);
 }
+
+List<Product> listWomanTop = [
+  Product(
+      1,
+      "assets/images/ws.png",
+      22,
+      19,
+      "T-Shirt SPANISH",
+      "Mango",
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 5, 2, 1, 1, 3, 2, 4],
+      "Sport clothes",
+      "Always bringing its A-game, sports giant PUMA is all about setting and smashing goals in its quest to be forever faster. Feeling motivated yet? Join the club. Packed with all our favourite picks, our PUMA at ASOS edit brings the brand’s MVPs to your rotation. From comfy-cool joggers, hoodies and sweatshirts to caps, bags and trainers, it’s all here to cop. Activewear gets levelled up too, with sweat-wicking tops, leggings and sports bras taking centre stage."),
+  Product(
+      2,
+      "assets/images/ws1.png",
+      30,
+      18,
+      "Blouse",
+      "Dorothy Perkins",
+      [5, 4, 3, 5, 3, 5, 4, 5, 5, 5, 4, 4, 5, 3, 1, 4],
+      "Sport clothes",
+      "Godfather of the dad-trainer aesthetic, New Balance has been flexing its footwear and clothing credentials for over 100 years. The brand’s supportive running trainers are all the motivation you need, while its retro lifestyle shoes are your go-tos for added style props. Scroll everything from T-shirts, leggings and accessories in our New Balance at ASOS edit, plus training tops and sports bras in a range of slick colourways."),
+  Product(
+      3,
+      "assets/images/ws.png",
+      22,
+      19,
+      "T-Shirt SPANISH",
+      "Mango",
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 5, 2, 1, 1, 3, 2, 4],
+      "Sport clothes",
+      "Always bringing its A-game, sports giant PUMA is all about setting and smashing goals in its quest to be forever faster. Feeling motivated yet? Join the club. Packed with all our favourite picks, our PUMA at ASOS edit brings the brand’s MVPs to your rotation. From comfy-cool joggers, hoodies and sweatshirts to caps, bags and trainers, it’s all here to cop. Activewear gets levelled up too, with sweat-wicking tops, leggings and sports bras taking centre stage."),
+  Product(
+      4,
+      "assets/images/ws1.png",
+      30,
+      18,
+      "Blouse",
+      "Dorothy Perkins",
+      [5, 4, 3, 5, 3, 5, 4, 5, 5, 5, 4, 4, 5, 3, 1, 4],
+      "Sport clothes",
+      "Godfather of the dad-trainer aesthetic, New Balance has been flexing its footwear and clothing credentials for over 100 years. The brand’s supportive running trainers are all the motivation you need, while its retro lifestyle shoes are your go-tos for added style props. Scroll everything from T-shirts, leggings and accessories in our New Balance at ASOS edit, plus training tops and sports bras in a range of slick colourways."),
+  Product(
+      5,
+      "assets/images/ws.png",
+      22,
+      19,
+      "T-Shirt SPANISH",
+      "Mango",
+      [5, 4, 3, 5, 5, 5, 5, 4, 5, 5, 5, 2, 1, 1, 3, 2, 4],
+      "Sport clothes",
+      "Always bringing its A-game, sports giant PUMA is all about setting and smashing goals in its quest to be forever faster. Feeling motivated yet? Join the club. Packed with all our favourite picks, our PUMA at ASOS edit brings the brand’s MVPs to your rotation. From comfy-cool joggers, hoodies and sweatshirts to caps, bags and trainers, it’s all here to cop. Activewear gets levelled up too, with sweat-wicking tops, leggings and sports bras taking centre stage."),
+  Product(
+      6,
+      "assets/images/ws1.png",
+      30,
+      18,
+      "Blouse",
+      "Dorothy Perkins",
+      [5, 4, 3, 5, 3, 5, 4, 5, 5, 5, 4, 4, 5, 3, 1, 4],
+      "Sport clothes",
+      "Godfather of the dad-trainer aesthetic, New Balance has been flexing its footwear and clothing credentials for over 100 years. The brand’s supportive running trainers are all the motivation you need, while its retro lifestyle shoes are your go-tos for added style props. Scroll everything from T-shirts, leggings and accessories in our New Balance at ASOS edit, plus training tops and sports bras in a range of slick colourways."),
+];
