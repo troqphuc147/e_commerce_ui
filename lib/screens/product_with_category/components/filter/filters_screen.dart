@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/bottom_buttons.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/brand.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/category.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/color.dart';
@@ -52,6 +53,7 @@ class _FilterScreenState extends State<FilterScreen> {
           ),
         ),
       ),
+      bottomSheet: const BottomButtons(),
     );
   }
 }

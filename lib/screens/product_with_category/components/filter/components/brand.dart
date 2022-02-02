@@ -52,11 +52,17 @@ class _BrandFilterState extends State<BrandFilter> {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.arrow_forward_ios),
+                icon: Icon(
+                  Icons.arrow_forward_ios,
+                  size: getProportionateScreenWidth(24),
+                ),
               ),
             ],
           ),
         ),
+        SizedBox(
+          height: getProportionateScreenWidth(80),
+        )
       ],
     );
   }
