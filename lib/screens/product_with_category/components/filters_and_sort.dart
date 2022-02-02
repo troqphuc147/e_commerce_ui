@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
+import 'package:e_commerce_ui/screens/product_with_category/components/filter/filters_screen.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/sort_button.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _FilterAndSortState extends State<FilterAndSort> {
   Widget build(BuildContext context) {
     return Container(
       height: getProportionateScreenWidth(44),
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -36,7 +37,12 @@ class _FilterAndSortState extends State<FilterAndSort> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FilterScreen()));
+              },
               child: Row(
                 children: [
                   SvgPicture.asset("assets/icons/filter.svg"),
@@ -52,7 +58,8 @@ class _FilterAndSortState extends State<FilterAndSort> {
             ),
             SortButton(sort: sort),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+              },
               child: SvgPicture.asset("assets/icons/view_list.svg"),
             )
           ],
@@ -60,5 +67,4 @@ class _FilterAndSortState extends State<FilterAndSort> {
       ),
     );
   }
-
 }
