@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
+import 'package:e_commerce_ui/screens/product_with_category/components/sort_button.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -49,21 +50,7 @@ class _FilterAndSortState extends State<FilterAndSort> {
                 ],
               ),
             ),
-            GestureDetector(
-              onTap: () {},
-              child: Row(
-                children: [
-                  SvgPicture.asset("assets/icons/sort.svg"),
-                  SizedBox(
-                    width: getProportionateScreenWidth(5),
-                  ),
-                  Text(
-                    sort,
-                    style: TextStyle(fontSize: getProportionateScreenWidth(11)),
-                  )
-                ],
-              ),
-            ),
+            SortButton(sort: sort),
             GestureDetector(
               onTap: () {},
               child: SvgPicture.asset("assets/icons/view_list.svg"),
@@ -73,4 +60,5 @@ class _FilterAndSortState extends State<FilterAndSort> {
       ),
     );
   }
+
 }

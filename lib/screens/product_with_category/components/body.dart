@@ -19,18 +19,18 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Column(
-          children: [
-            const ListCategoryChips(),
-            const FilterAndSort(),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(20),
-                    vertical: getProportionateScreenWidth(20)),
-                child: const SingleChildScrollView(child: ListProduct()),
-              ),
-            ),
-          ],
-        ));
+      children: [
+        const ListCategoryChips(),
+        const FilterAndSort(),
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.symmetric(
+                horizontal: getProportionateScreenWidth(20),
+                vertical: getProportionateScreenWidth(20)),
+            child: const SingleChildScrollView(child: ListProduct()),
+          ),
+        ),
+      ],
+    ));
   }
 }
