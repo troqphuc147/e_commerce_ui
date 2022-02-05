@@ -1,7 +1,7 @@
 import 'package:e_commerce_ui/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../size_config.dart';
+import '../../../../../../../size_config.dart';
 
 class BottomButtons extends StatefulWidget {
   const BottomButtons({Key? key}) : super(key: key);

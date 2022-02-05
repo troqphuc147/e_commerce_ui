@@ -1,11 +1,9 @@
-import 'package:e_commerce_ui/components/new_product_cart.dart';
-import 'package:e_commerce_ui/components/product_cart.dart';
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/screens/favorite/components/list_products.dart';
 import 'package:e_commerce_ui/screens/filter_and_sort/filters_and_sort.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/header.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/list_products.dart';
-import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
+
+import '../../../size_config.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -24,9 +22,8 @@ class _BodyState extends State<Body> {
         const FilterAndSort(),
         Expanded(
           child: Container(
-            padding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(20),
-                vertical: getProportionateScreenWidth(20)),
+            padding:
+                EdgeInsets.symmetric(vertical: getProportionateScreenWidth(20)),
             child: const SingleChildScrollView(child: ListProduct()),
           ),
         ),

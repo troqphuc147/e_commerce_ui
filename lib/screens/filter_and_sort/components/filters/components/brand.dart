@@ -2,7 +2,7 @@ import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/models/brands.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../size_config.dart';
+import '../../../../../../../size_config.dart';
 
 class BrandFilter extends StatefulWidget {
   const BrandFilter({Key? key}) : super(key: key);

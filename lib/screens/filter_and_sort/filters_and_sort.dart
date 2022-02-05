@@ -1,6 +1,6 @@
 import 'package:e_commerce_ui/constants.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/filters_screen.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/sort_button.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/filters_screen.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/sort/sort_button.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

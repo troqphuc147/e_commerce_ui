@@ -1,9 +1,9 @@
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/bottom_buttons.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/brand.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/category.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/color.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/price.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/size.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/bottom_buttons.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/brand.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/category.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/price.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/size.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/color.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 

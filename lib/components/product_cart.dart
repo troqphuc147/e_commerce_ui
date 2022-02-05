@@ -8,7 +8,7 @@ import '../size_config.dart';
 
 class ProductCard extends StatefulWidget {
   final Product product;
-  const ProductCard({Key? key, required this.product}) : super(key: key);
+  const ProductCard({Key? key,required this.product}) : super(key: key);
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -53,32 +53,34 @@ class _ProductCardState extends State<ProductCard> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              width: SizeConfig.screenWidth * 0.107,
-                              height: SizeConfig.screenWidth * 0.0642,
-                              margin: EdgeInsets.only(
-                                  left: getProportionateScreenWidth(8),
-                                  top: getProportionateScreenHeight(8)),
-                              decoration: BoxDecoration(
-                                color: kPrimaryColor,
-                                borderRadius: BorderRadius.circular(25),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "-" +
-                                      ((widget.product.price -
-                                                  widget.product.salePrice) /
-                                              widget.product.price *
-                                              100)
-                                          .toInt()
-                                          .toString() +
-                                      "%",
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600),
+                            if (widget.product.price !=
+                                widget.product.salePrice)
+                              Container(
+                                width: SizeConfig.screenWidth * 0.107,
+                                height: SizeConfig.screenWidth * 0.0642,
+                                margin: EdgeInsets.only(
+                                    left: getProportionateScreenWidth(8),
+                                    top: getProportionateScreenHeight(8)),
+                                decoration: BoxDecoration(
+                                  color: kPrimaryColor,
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "-" +
+                                        ((widget.product.price -
+                                                    widget.product.salePrice) /
+                                                widget.product.price *
+                                                100)
+                                            .toInt()
+                                            .toString() +
+                                        "%",
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
                                 ),
                               ),
-                            ),
                           ],
                         ),
                       ),
@@ -93,7 +95,7 @@ class _ProductCardState extends State<ProductCard> {
                           Row(
                             children: [
                               RatingBar(
-                                initialRating: widget.product.getRating()/2,
+                                initialRating: widget.product.getRating() / 2,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
                                 itemCount: 5,
@@ -150,16 +152,19 @@ class _ProductCardState extends State<ProductCard> {
                 ),
                 Row(
                   children: [
-                    Text(
-                      widget.product.price.toInt().toString() + "\$",
-                      style: TextStyle(
-                        color: kPrimarySecondColor,
-                        decoration: TextDecoration.lineThrough,
-                        fontSize: getProportionateScreenHeight(14),
+                    if (widget.product.price != widget.product.salePrice)
+                      Text(
+                        widget.product.price.toInt().toString() + "\$",
+                        style: TextStyle(
+                          color: kPrimarySecondColor,
+                          decoration: TextDecoration.lineThrough,
+                          fontSize: getProportionateScreenHeight(14),
+                        ),
                       ),
-                    ),
+                    if (widget.product.price != widget.product.salePrice)
+                      const Text(" "),
                     Text(
-                      " " + widget.product.salePrice.toInt().toString() + "\$",
+                      widget.product.salePrice.toInt().toString() + "\$",
                       style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: getProportionateScreenHeight(14),

@@ -1,9 +1,7 @@
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/category_container.dart';
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/size_container.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/category_container.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../size_config.dart';
+import '../../../../../../../size_config.dart';
 
 class CategoryFilter extends StatefulWidget {
   const CategoryFilter({Key? key}) : super(key: key);

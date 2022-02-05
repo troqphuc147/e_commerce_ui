@@ -1,16 +1,16 @@
-import 'package:e_commerce_ui/screens/product_with_category/components/filter/components/size_container.dart';
+import 'package:e_commerce_ui/screens/filter_and_sort/components/filters/components/color_container.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../size_config.dart';
+import '../../../../../../../size_config.dart';
 
-class SizeFilter extends StatefulWidget {
-  const SizeFilter({Key? key}) : super(key: key);
+class ColorFilter extends StatefulWidget {
+  const ColorFilter({Key? key}) : super(key: key);
 
   @override
-  _SizeFilterState createState() => _SizeFilterState();
+  _ColorFilterState createState() => _ColorFilterState();
 }
 
-class _SizeFilterState extends State<SizeFilter> {
+class _ColorFilterState extends State<ColorFilter> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +21,7 @@ class _SizeFilterState extends State<SizeFilter> {
               horizontal: getProportionateScreenWidth(20),
               vertical: getProportionateScreenWidth(15)),
           child: Text(
-            "Sizes",
+            "Colors",
             style: TextStyle(
                 fontSize: getProportionateScreenWidth(16),
                 fontWeight: FontWeight.w600),
@@ -36,11 +36,12 @@ class _SizeFilterState extends State<SizeFilter> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
-                SizeContainer(size: "XS"),
-                SizeContainer(size: "S"),
-                SizeContainer(size: "M"),
-                SizeContainer(size: "L"),
-                SizeContainer(size: "XL"),
+                ColorContainer(color: Colors.black),
+                ColorContainer(color: Color(0xffF6F6F6)),
+                ColorContainer(color: Color(0xffB82222)),
+                ColorContainer(color: Color(0xffBEA9A9)),
+                ColorContainer(color: Color(0xffE2BB8D)),
+                ColorContainer(color: Color(0xff151867)),
               ],
             ),
           ),
