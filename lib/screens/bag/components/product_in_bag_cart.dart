@@ -39,20 +39,12 @@ class _ProductInBagCartState extends State<ProductInBagCart> {
                   boxShadow: [
                     BoxShadow(
                         color: Colors.grey.withOpacity(0.45),
-                        offset: const Offset(2, 1),
+                        offset: const Offset(2, 2),
                         blurRadius: 4),
                     BoxShadow(
                         color: Colors.grey.withOpacity(0.45),
-                        offset: const Offset(-1, -2),
+                        offset: const Offset(-2, -2),
                         blurRadius: 4),
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.45),
-                        offset: const Offset(-2, 0),
-                        blurRadius: 4),
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.45),
-                        offset: const Offset(2, 0),
-                        blurRadius: 4)
                   ]),
               child: Row(
                 children: [

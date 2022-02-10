@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/models/user_profile.dart';
+import 'package:e_commerce_ui/screens/order_detail/order_detail_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -134,19 +135,30 @@ class OrderCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: getProportionateScreenWidth(36),
-                width: getProportionateScreenWidth(98),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black),
-                ),
-                child: Center(
-                  child: Text(
-                    "Details",
-                    style: TextStyle(
-                        fontSize: getProportionateScreenWidth(14),
-                        fontWeight: FontWeight.w500),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OrderDetailScreen(
+                                userOrder: userOrder,
+                                total: totalPrice,
+                              )));
+                },
+                child: Container(
+                  height: getProportionateScreenWidth(36),
+                  width: getProportionateScreenWidth(98),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.black),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Details",
+                      style: TextStyle(
+                          fontSize: getProportionateScreenWidth(14),
+                          fontWeight: FontWeight.w500),
+                    ),
                   ),
                 ),
               ),
