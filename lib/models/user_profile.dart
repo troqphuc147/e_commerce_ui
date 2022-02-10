@@ -30,7 +30,8 @@ List<UserOrder> listOrder = [
       "3 Newbridge Court ,Chino Hills,CA 91709, United States",
       "**** **** **** 3947",
       "FedEx, 3 days, 15\$",
-      "10%, Personal promo code", listProductInBag),
+      "10%, Personal promo code",
+      [listProductInBag[0], listProductInBag[0], listProductInBag[1]]),
   UserOrder(
       "1414555",
       "PV8884018485",
@@ -38,7 +39,8 @@ List<UserOrder> listOrder = [
       "3 Newbridge Court ,Chino Hills,CA 91709, United States",
       "**** **** **** 3947",
       "FedEx, 3 days, 15\$",
-      "10%, Personal promo code", listProductInBag),
+      "10%, Personal promo code",
+      [listProductInBag[0], listProductInBag[1], listProductInBag[2]]),
   UserOrder(
       "1414567",
       "PV8884018486",
@@ -46,7 +48,8 @@ List<UserOrder> listOrder = [
       "3 Newbridge Court ,Chino Hills,CA 91709, United States",
       "**** **** **** 3947",
       "FedEx, 3 days, 15\$",
-      "10%, Personal promo code", listProductInBag),
+      "10%, Personal promo code",
+      [listProductInBag[0], listProductInBag[1]]),
   UserOrder(
       "1414590",
       "PV8884018487",
@@ -54,6 +57,6 @@ List<UserOrder> listOrder = [
       "3 Newbridge Court ,Chino Hills,CA 91709, United States",
       "**** **** **** 3947",
       "FedEx, 3 days, 15\$",
-      "10%, Personal promo code", listProductInBag)
-
+      "10%, Personal promo code",
+      [listProductInBag[1], listProductInBag[2], listProductInBag[2]])
 ];

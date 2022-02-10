@@ -2,7 +2,7 @@ import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/bag/bag_screen.dart';
 import 'package:e_commerce_ui/screens/favorite/favorite_screen.dart';
 import 'package:e_commerce_ui/screens/home/home_screen.dart';
-import 'package:e_commerce_ui/screens/my_profile/my_profile_screen.dart';
+import 'package:e_commerce_ui/screens/user_profile/my_profile_screen.dart';
 import 'package:e_commerce_ui/screens/shop/shop_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
