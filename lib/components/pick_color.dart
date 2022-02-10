@@ -1,6 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/size_config.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PickColor extends StatefulWidget {
@@ -220,7 +219,7 @@ class _ProductColorState extends State<ProductColor> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: widget.onPressed,
-      child: Container(
+      child: SizedBox(
         height: getProportionateScreenWidth(40),
         width: getProportionateScreenWidth(100),
         child: Row(

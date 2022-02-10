@@ -9,7 +9,6 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  final _key = GlobalKey<FormState>();
   String email = "";
   String password = "";
   String rePassword = "";

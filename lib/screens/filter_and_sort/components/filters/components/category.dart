@@ -42,7 +42,7 @@ class _CategoryFilterState extends State<CategoryFilter> {
                 Wrap(
                   spacing: getProportionateScreenWidth(15),
                   runSpacing: getProportionateScreenWidth(15),
-                  children: [
+                  children: const [
                     CategoryContainer(category: "All"),
                     CategoryContainer(category: "Woman"),
                     CategoryContainer(category: "Man"),

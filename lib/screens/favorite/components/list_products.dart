@@ -1,6 +1,4 @@
 import 'package:e_commerce_ui/components/favorite_product_cart.dart';
-import 'package:e_commerce_ui/components/new_product_cart.dart';
-import 'package:e_commerce_ui/components/product_cart.dart';
 import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,4 @@
-import 'dart:ui';
 
-import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/home/components/new_product.dart';
 import 'package:e_commerce_ui/screens/home/components/sale_product.dart';
 import 'package:e_commerce_ui/screens/home/components/small_banner.dart';

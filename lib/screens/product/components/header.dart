@@ -1,7 +1,6 @@
 import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Header extends StatefulWidget {
   final ProductInfor productInfor;

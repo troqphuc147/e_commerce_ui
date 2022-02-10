@@ -5,7 +5,6 @@ import 'package:e_commerce_ui/screens/home/home_screen.dart';
 import 'package:e_commerce_ui/screens/signin/components/login_form.dart';
 import 'package:e_commerce_ui/screens/signup/signup_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_ui/components/default_button.dart';
 

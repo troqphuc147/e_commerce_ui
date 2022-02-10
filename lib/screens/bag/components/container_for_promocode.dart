@@ -14,7 +14,7 @@ class _ContainerPromoCodeState extends State<ContainerPromoCode> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Container(
+      child: SizedBox(
         height: getProportionateScreenWidth(36),
         width: double.infinity,
         child: Stack(

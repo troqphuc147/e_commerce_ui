@@ -4,7 +4,6 @@ import 'package:e_commerce_ui/screens/product/product_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
 class ProductInBagCart extends StatefulWidget {
   ProductInBag productInBag;

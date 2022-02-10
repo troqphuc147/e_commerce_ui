@@ -1,4 +1,3 @@
-import 'package:e_commerce_ui/components/default_button_2.dart';
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/size_config.dart';

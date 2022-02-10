@@ -1,10 +1,7 @@
 import 'package:e_commerce_ui/components/default_button.dart';
-import 'package:e_commerce_ui/components/like_button.dart';
-import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/screens/bag/components/container_for_promocode.dart';
 import 'package:e_commerce_ui/screens/bag/components/list_product.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../../size_config.dart';
 
 class Body extends StatefulWidget {
@@ -45,7 +42,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: getProportionateScreenWidth(14),
             ),
-            DefaultButton(text: "Check out"),
+            const DefaultButton(text: "Check out"),
             SizedBox(
               height: getProportionateScreenWidth(14),
             ),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CategoryContainer extends StatefulWidget {
   final String category;
-  CategoryContainer({Key? key, required this.category}) : super(key: key);
+  const CategoryContainer({Key? key, required this.category}) : super(key: key);
 
   @override
   _CategoryContainerState createState() => _CategoryContainerState();

@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:e_commerce_ui/components/add_to_bag_button.dart';
 import 'package:e_commerce_ui/constants.dart';

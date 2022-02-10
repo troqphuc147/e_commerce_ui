@@ -1,6 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/size_config.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PickSize extends StatefulWidget {

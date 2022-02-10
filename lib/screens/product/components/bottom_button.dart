@@ -18,8 +18,8 @@ class _BottomButtonState extends State<BottomButton> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+          const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: DefaultButton(text: "add to cart")),
           SizedBox(
             height: getProportionateScreenWidth(20),

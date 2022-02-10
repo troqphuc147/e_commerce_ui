@@ -1,5 +1,4 @@
 import 'package:e_commerce_ui/components/custom_bottom_nav__bar.dart';
-import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/enums.dart';
 import 'package:e_commerce_ui/screens/shop/components/body.dart';
 import 'package:e_commerce_ui/size_config.dart';

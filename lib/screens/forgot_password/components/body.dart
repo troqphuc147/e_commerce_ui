@@ -58,7 +58,7 @@ class _BodyState extends State<Body> {
               SizedBox(height: SizeConfig.screenHeight*0.03,),
               const ForgotPasswordForm(),
               SizedBox(height: SizeConfig.screenHeight*0.07,),
-              DefaultButton(text: "SEND"),
+              const DefaultButton(text: "SEND"),
             ],
           ),
         ),

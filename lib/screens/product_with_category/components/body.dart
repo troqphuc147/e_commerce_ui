@@ -1,6 +1,3 @@
-import 'package:e_commerce_ui/components/new_product_cart.dart';
-import 'package:e_commerce_ui/components/product_cart.dart';
-import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/screens/filter_and_sort/filters_and_sort.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/header.dart';
 import 'package:e_commerce_ui/screens/product_with_category/components/list_products.dart';

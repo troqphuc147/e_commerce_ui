@@ -2,7 +2,6 @@ import 'package:e_commerce_ui/components/new_product_cart.dart';
 import 'package:e_commerce_ui/components/product_cart.dart';
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/models/Product.dart';
-import 'package:e_commerce_ui/screens/home/components/sale_product.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,7 @@ class _ProductRecommendState extends State<ProductRecommend> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: getProportionateScreenWidth(310),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

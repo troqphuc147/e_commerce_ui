@@ -2,7 +2,6 @@ import 'package:e_commerce_ui/components/default_button.dart';
 import 'package:e_commerce_ui/components/list_social_button.dart';
 import 'package:e_commerce_ui/screens/signin/login_screen.dart';
 import 'package:e_commerce_ui/screens/signup/components/signup_form.dart';
-import 'package:e_commerce_ui/screens/signup/signup_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -75,7 +74,7 @@ class _BodyState extends State<Body> {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.045),
-              DefaultButton(text: "Sign up"),
+              const DefaultButton(text: "Sign up"),
               SizedBox(height: SizeConfig.screenHeight * 0.02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,4 +1,3 @@
-import 'package:e_commerce_ui/components/like_button.dart';
 import 'package:e_commerce_ui/models/category.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';

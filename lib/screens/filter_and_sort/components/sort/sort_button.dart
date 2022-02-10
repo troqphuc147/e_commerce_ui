@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../constants.dart';
 import '../../../../size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../../size_config.dart';
 class SortButton extends StatefulWidget {
   String sort;
   SortButton({Key? key, required this.sort}) : super(key: key);

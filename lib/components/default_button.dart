@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class DefaultButton extends StatefulWidget {
   final String text;
   final Function()? onPress;
-  DefaultButton({
+  const DefaultButton({
     Key? key,
     required this.text,
     this.onPress,

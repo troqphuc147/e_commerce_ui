@@ -1,10 +1,8 @@
 import 'dart:io';
-
 import 'package:e_commerce_ui/components/default_button.dart';
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/comment_form.dart';
 import 'package:e_commerce_ui/size_config.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -27,10 +25,9 @@ class _WriteReviewScreen extends State<WriteReviewScreen> {
           listImageFile = pickedfiles;
         });
       } else {
-        print("No image is selected.");
       }
     } catch (e) {
-      print("error while picking file.");
+      print("error");
     }
   }
 
@@ -172,7 +169,7 @@ class _WriteReviewScreen extends State<WriteReviewScreen> {
                   ),
                 ),
                 const Spacer(),
-                DefaultButton(text: "Send review"),
+                const DefaultButton(text: "Send review"),
                 SizedBox(
                   height: getProportionateScreenWidth(20),
                 ),

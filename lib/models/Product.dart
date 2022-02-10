@@ -1,4 +1,3 @@
-import 'package:get/get.dart';
 
 class Product {
   final int id;

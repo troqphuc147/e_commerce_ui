@@ -9,7 +9,6 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  final _key = GlobalKey<FormState>();
   String email = "";
   String password = "";
   @override
