@@ -8,8 +8,7 @@ import 'package:get/get.dart';
 
 class ProductInBagCart extends StatefulWidget {
   ProductInBag productInBag;
-  bool change ;
-  ProductInBagCart({Key? key, required this.productInBag, required this.change}) : super(key: key);
+  ProductInBagCart({Key? key, required this.productInBag}) : super(key: key);
 
   @override
   _ProductInBagCartState createState() => _ProductInBagCartState();

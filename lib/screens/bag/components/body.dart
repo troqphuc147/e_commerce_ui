@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/components/default_button.dart';
 import 'package:e_commerce_ui/components/like_button.dart';
 import 'package:e_commerce_ui/models/Product.dart';
 import 'package:e_commerce_ui/screens/bag/components/container_for_promocode.dart';
@@ -14,22 +15,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  double total = 0;
-  List<bool> isChange = [];
-  create() {
-    for (var i in listProductInBag) {
-      isChange.add(false);
-      total += i.totalPrice;
-    }
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    create();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -50,9 +35,8 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: getProportionateScreenWidth(14),
             ),
-            Expanded(
+            const Expanded(
                 child: ListProductInBag(
-              isChange: isChange,
             )),
             SizedBox(
               height: getProportionateScreenWidth(14),
@@ -61,11 +45,9 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: getProportionateScreenWidth(14),
             ),
-            Row(
-              children: [Text(total.toInt().toString())],
-            ),
+            DefaultButton(text: "Check out"),
             SizedBox(
-              height: getProportionateScreenWidth(20),
+              height: getProportionateScreenWidth(14),
             ),
           ],
         ));
