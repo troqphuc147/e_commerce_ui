@@ -97,21 +97,6 @@ class _FavoriteProductCardState extends State<FavoriteProductCard> {
                                   ],
                                 ),
                               ),
-                              Positioned(
-                                  top: -getProportionateScreenWidth(7),
-                                  right: -getProportionateScreenWidth(7),
-                                  child: IconButton(
-                                    onPressed: () {
-                                      setState(() {
-                                        delete = true;
-                                      });
-                                    },
-                                    icon: Icon(
-                                      Icons.close,
-                                      size: getProportionateScreenWidth(24),
-                                      color: kPrimarySecondColor,
-                                    ),
-                                  )),
                               if (!widget.product.isSoldOut)
                                 Positioned(
                                     right: 0,
@@ -279,6 +264,21 @@ class _FavoriteProductCardState extends State<FavoriteProductCard> {
                           ),
                         ],
                       ),
+                    Positioned(
+                        top: -getProportionateScreenWidth(7),
+                        right: -getProportionateScreenWidth(7),
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              delete = true;
+                            });
+                          },
+                          icon: Icon(
+                            Icons.close,
+                            size: getProportionateScreenWidth(24),
+                            color: kPrimarySecondColor,
+                          ),
+                        )),
                   ],
                 ),
               ),

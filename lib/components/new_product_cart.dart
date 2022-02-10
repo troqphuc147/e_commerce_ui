@@ -48,7 +48,8 @@ class _NewProductCard extends State<NewProductCard> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(widget.product.image),
-                                fit: BoxFit.cover)),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(15)),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,

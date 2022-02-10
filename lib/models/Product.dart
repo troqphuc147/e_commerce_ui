@@ -1,5 +1,4 @@
-import 'package:e_commerce_ui/screens/home/components/sale_product.dart';
-import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Product {
   final int id;
@@ -336,3 +335,26 @@ List<FavoriteProduct> listFavoriteProducts = [
       "M",
       "Black"),
 ];
+
+class ProductInBag {
+  String image;
+  String color;
+  String size;
+  int amount;
+  Product product;
+  ProductInBag(this.image, this.size, this.color, this.amount, this.product);
+  int get totalPrice => (product.price * amount).toInt();
+  setAmount(int newAmount) {
+    if (newAmount <= 1) {
+      amount = 1;
+    } else {
+      amount = newAmount;
+    }
+  }
+}
+List<ProductInBag> listProductInBag = [
+  ProductInBag("assets/images/bag1.png", "M", "Black", 1, listSaleProduct[0]),
+  ProductInBag("assets/images/bag2.png", "XL", "White", 1, listNewProduct[0]),
+  ProductInBag("assets/images/bag3.png", "S", "Blue", 1, listSaleProduct[1]),
+];
+
