@@ -18,66 +18,63 @@ class _NotificationsState extends State<Notifications> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: getProportionateScreenWidth(147),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(
-          "Personal Information",
-          style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: getProportionateScreenWidth(16)),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Password",
-              style: TextStyle(fontSize: getProportionateScreenWidth(14)),
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(
+        "Personal Information",
+        style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: getProportionateScreenWidth(16)),
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Password",
+            style: TextStyle(fontSize: getProportionateScreenWidth(14)),
+          ),
+          CupertinoSwitch(
+              value: saleChange,
+              onChanged: (value) {
+                setState(() {
+                  saleChange = !saleChange;
+                });
+              })
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "New arrivals",
+            style: TextStyle(fontSize: getProportionateScreenWidth(14)),
+          ),
+          CupertinoSwitch(
+              value: newArrival,
+              onChanged: (value) {
+                setState(() {
+                  newArrival = !newArrival;
+                });
+              })
+        ],
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Delivery status changes",
+            style: TextStyle(
+              fontSize: getProportionateScreenWidth(14),
             ),
-            CupertinoSwitch(
-                value: saleChange,
-                onChanged: (value) {
-                  setState(() {
-                    saleChange = !saleChange;
-                  });
-                })
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "New arrivals",
-              style: TextStyle(fontSize: getProportionateScreenWidth(14)),
-            ),
-            CupertinoSwitch(
-                value: newArrival,
-                onChanged: (value) {
-                  setState(() {
-                    newArrival = !newArrival;
-                  });
-                })
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Delivery status changes",
-              style: TextStyle(
-                fontSize: getProportionateScreenWidth(14),
-              ),
-            ),
-            CupertinoSwitch(
-                value: deliveryStatusChange,
-                onChanged: (value) {
-                  setState(() {
-                    deliveryStatusChange = !deliveryStatusChange;
-                  });
-                })
-          ],
-        ),
-      ]),
-    );
+          ),
+          CupertinoSwitch(
+              value: deliveryStatusChange,
+              onChanged: (value) {
+                setState(() {
+                  deliveryStatusChange = !deliveryStatusChange;
+                });
+              })
+        ],
+      ),
+    ]);
   }
 }

@@ -44,7 +44,7 @@ class OrderInformation extends StatelessWidget {
                   child: Wrap(
                     children: [
                       Text(
-                        userOrder.shippingAddress,
+                        userOrder.shippingAddress.address,
                         style: TextStyle(
                           fontSize: getProportionateScreenWidth(14),
                           fontWeight: FontWeight.w600,
@@ -83,7 +83,7 @@ class OrderInformation extends StatelessWidget {
                   child: Wrap(
                     children: [
                       Text(
-                        "  " + userOrder.paymentMethod,
+                        "  " + userOrder.paymentMethod.cardNumber,
                         style: TextStyle(
                           fontSize: getProportionateScreenWidth(14),
                           fontWeight: FontWeight.w600,

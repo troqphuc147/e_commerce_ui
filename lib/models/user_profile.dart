@@ -4,15 +4,32 @@ class User {
   String avatar;
   String name;
   String email;
-  User(this.email, this.avatar, this.name);
+  List<PaymentMethod> paymentCardNumber;
+  List<ShippingAddress> shippingAddress;
+  User(this.email, this.avatar, this.name, this.shippingAddress,
+      this.paymentCardNumber);
+}
+
+class ShippingAddress {
+  String nameReceiver;
+  String address;
+  ShippingAddress(this.address, this.nameReceiver);
+}
+
+class PaymentMethod {
+  String image;
+  String cardNumber;
+  String nameOwn;
+  String dateExpiry;
+  PaymentMethod(this.image, this.cardNumber, this.nameOwn, this.dateExpiry);
 }
 
 class UserOrder {
   String no;
   String trackingNumber;
   DateTime dateTime;
-  String shippingAddress;
-  String paymentMethod;
+  ShippingAddress shippingAddress;
+  PaymentMethod paymentMethod;
   String deliveryMethod;
   String discount;
   List<ProductInBag> lisProduct;
@@ -21,14 +38,26 @@ class UserOrder {
 }
 
 User myProfile = User("huynhtrongphuc@gmail.com",
-    "assets/images/userAvatar.png", "Huynh Trong Phuc");
+    "assets/images/userAvatar.png", "Huynh Trong Phuc", [
+  ShippingAddress(
+      "3 Newbridge Court Chino Hills, CA 91709, United States", "Jane Doe"),
+  ShippingAddress(
+      "3 Newbridge Court Chino Hills, CA 91709, United States", "Jane Doe"),
+  ShippingAddress(
+      "51 Riverside Chino Hills, CA 91709, United States", "Jane Doe"),
+], [
+  PaymentMethod("assets/images/blackmastercard.png",
+      "* * * *  * * * *  * * * *  3947", "Jane Doe", "05/23"),
+  PaymentMethod("assets/images/visacard.png", "* * * *  * * * *  * * * *  4546",
+      "Jane Doe", "05/23")
+]);
 List<UserOrder> listOrder = [
   UserOrder(
       "1414553",
       "PV8884018484",
       DateTime(2021, 7, 8),
-      "3 Newbridge Court ,Chino Hills,CA 91709, United States",
-      "**** **** **** 3947",
+      myProfile.shippingAddress[0],
+      myProfile.paymentCardNumber[0],
       "FedEx, 3 days, 15\$",
       "10%, Personal promo code",
       [listProductInBag[0], listProductInBag[0], listProductInBag[1]]),
@@ -36,8 +65,8 @@ List<UserOrder> listOrder = [
       "1414555",
       "PV8884018485",
       DateTime(2021, 8, 2),
-      "3 Newbridge Court ,Chino Hills,CA 91709, United States",
-      "**** **** **** 3947",
+      myProfile.shippingAddress[0],
+      myProfile.paymentCardNumber[1],
       "FedEx, 3 days, 15\$",
       "10%, Personal promo code",
       [listProductInBag[0], listProductInBag[1], listProductInBag[2]]),
@@ -45,8 +74,8 @@ List<UserOrder> listOrder = [
       "1414567",
       "PV8884018486",
       DateTime(2021, 11, 2),
-      "3 Newbridge Court ,Chino Hills,CA 91709, United States",
-      "**** **** **** 3947",
+      myProfile.shippingAddress[1],
+      myProfile.paymentCardNumber[1],
       "FedEx, 3 days, 15\$",
       "10%, Personal promo code",
       [listProductInBag[0], listProductInBag[1]]),
@@ -54,8 +83,8 @@ List<UserOrder> listOrder = [
       "1414590",
       "PV8884018487",
       DateTime(2022, 1, 1),
-      "3 Newbridge Court ,Chino Hills,CA 91709, United States",
-      "**** **** **** 3947",
+      myProfile.shippingAddress[2],
+      myProfile.paymentCardNumber[0],
       "FedEx, 3 days, 15\$",
       "10%, Personal promo code",
       [listProductInBag[1], listProductInBag[2], listProductInBag[2]])

@@ -1,9 +1,12 @@
+import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/setting/components/appbar.dart';
 import 'package:e_commerce_ui/screens/setting/components/notifications.dart';
 import 'package:e_commerce_ui/screens/setting/components/password_form.dart';
 import 'package:e_commerce_ui/screens/setting/components/personal_information_form.dart';
+import 'package:e_commerce_ui/screens/signin/login_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
+
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
@@ -40,6 +43,32 @@ class _BodyState extends State<Body> {
                 height: getProportionateScreenWidth(30),
               ),
               const Notifications(),
+              SizedBox(
+                height: getProportionateScreenWidth(30),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()));
+                    },
+                    child: Text(
+                      "Sign out",
+                      style: TextStyle(
+                        color: kPrimaryColor,
+                        fontSize: getProportionateScreenWidth(14),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: getProportionateScreenWidth(10),
+              ),
             ],
           ),
         ),
