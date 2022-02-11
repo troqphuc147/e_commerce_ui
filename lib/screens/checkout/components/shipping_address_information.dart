@@ -32,6 +32,7 @@ class _ShippingAddressInformationState
           width: double.infinity,
           height: getProportionateScreenWidth(108),
           padding: EdgeInsets.all(getProportionateScreenWidth(20)),
+          margin: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(4)),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),

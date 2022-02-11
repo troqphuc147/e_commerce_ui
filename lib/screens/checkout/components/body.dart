@@ -3,6 +3,7 @@ import 'package:e_commerce_ui/screens/checkout/components/bill_information.dart'
 import 'package:e_commerce_ui/screens/checkout/components/delivery_method.dart';
 import 'package:e_commerce_ui/screens/checkout/components/payment_information.dart';
 import 'package:e_commerce_ui/screens/checkout/components/shipping_address_information.dart';
+import 'package:e_commerce_ui/screens/order_success/order_success_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,15 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getProportionateScreenWidth(10),
             ),
-            DefaultButton(text: "Summit order"),
+            DefaultButton(
+              text: "Summit order",
+              onPress: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const OrderSuccessScreen()));
+              },
+            ),
           ],
         ),
       ),
