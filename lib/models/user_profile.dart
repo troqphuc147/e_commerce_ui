@@ -49,7 +49,7 @@ User myProfile = User("huynhtrongphuc@gmail.com",
   PaymentMethod("assets/images/blackmastercard.png",
       "* * * *  * * * *  * * * *  3947", "Jane Doe", "05/23"),
   PaymentMethod("assets/images/visacard.png", "* * * *  * * * *  * * * *  4546",
-      "Jane Doe", "05/23")
+      "Huynh Trong Phuc", "06/02")
 ]);
 List<UserOrder> listOrder = [
   UserOrder(

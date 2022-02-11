@@ -1,5 +1,6 @@
 import 'package:e_commerce_ui/screens/setting/setting_screen.dart';
 import 'package:e_commerce_ui/screens/user_order/user_order_screen.dart';
+import 'package:e_commerce_ui/screens/user_payment_method/user_payment_method_screen.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/main_button.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/user_inforamtion.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -13,6 +14,7 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  int paymentMethodIndex = 0;
   List<String> listContent = [
     "My orders",
     "Shipping addresses",
@@ -37,7 +39,10 @@ class _BodyState extends State<Body> {
             MaterialPageRoute(builder: (context) => const UserOrderScreen()));
       },
       () {},
-      () {},
+      () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => UserPaymentMethod(index: paymentMethodIndex,)));
+      },
       () {},
       () {},
       () {

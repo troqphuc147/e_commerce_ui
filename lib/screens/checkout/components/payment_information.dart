@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/models/user_profile.dart';
+import 'package:e_commerce_ui/screens/user_payment_method/user_payment_method_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -12,6 +13,7 @@ class PaymentInformation extends StatefulWidget {
 }
 
 class _PaymentInformationState extends State<PaymentInformation> {
+  int paymentMethodIndex = 0;
   PaymentMethod paymentMethod = myProfile.paymentCardNumber[0];
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,17 @@ class _PaymentInformationState extends State<PaymentInformation> {
                   fontWeight: FontWeight.w500),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => UserPaymentMethod(
+                              index: paymentMethodIndex,
+                            )));
+                setState(() {
+                  paymentMethod = myProfile.paymentCardNumber[paymentMethodIndex];
+                });
+              },
               child: Container(
                 margin: EdgeInsets.only(right: getProportionateScreenWidth(20)),
                 child: Text(
@@ -51,8 +63,7 @@ class _PaymentInformationState extends State<PaymentInformation> {
               width: getProportionateScreenWidth(64),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(paymentMethod.image ==
-                              "assets/images/blackmastercard.png"
+                      image: AssetImage(paymentMethodIndex == 0
                           ? "assets/images/mastercard.png"
                           : "assets/images/visalogo.png"))),
             ),
