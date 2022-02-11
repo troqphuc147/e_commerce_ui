@@ -1,4 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
+import 'package:e_commerce_ui/screens/setting/components/change_password_dialog.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -27,15 +28,7 @@ class _PasswordForm extends State<PasswordForm> {
                   fontWeight: FontWeight.w600,
                   fontSize: getProportionateScreenWidth(16)),
             ),
-            GestureDetector(
-              child: Text(
-                "Change",
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: kPrimarySecondColor,
-                    fontSize: getProportionateScreenWidth(14)),
-              ),
-            )
+            const ChangePasswordButton(),
           ],
         ),
         SizedBox(
