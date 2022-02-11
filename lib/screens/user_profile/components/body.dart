@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/screens/setting/setting_screen.dart';
 import 'package:e_commerce_ui/screens/user_order/user_order_screen.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/main_button.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/user_inforamtion.dart';
@@ -39,7 +40,10 @@ class _BodyState extends State<Body> {
       () {},
       () {},
       () {},
-      () {}
+      () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const SettingScreen()));
+      }
     ];
     return SingleChildScrollView(
       child: Column(
