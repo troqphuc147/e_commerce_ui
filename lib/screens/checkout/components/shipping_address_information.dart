@@ -1,5 +1,6 @@
 import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/models/user_profile.dart';
+import 'package:e_commerce_ui/screens/user_shipping_address/user_shipping_address_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,8 @@ class _ShippingAddressInformationState
           width: double.infinity,
           height: getProportionateScreenWidth(108),
           padding: EdgeInsets.all(getProportionateScreenWidth(20)),
-          margin: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(4)),
+          margin:
+              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(4)),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
@@ -61,7 +63,13 @@ class _ShippingAddressInformationState
                         fontWeight: FontWeight.w500),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const UserShippingAddress()));
+                    },
                     child: Text(
                       "Change",
                       style: TextStyle(

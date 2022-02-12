@@ -1,5 +1,5 @@
 import 'package:e_commerce_ui/components/default_button_2.dart';
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 import 'package:e_commerce_ui/screens/product/components/header.dart';
 import 'package:e_commerce_ui/screens/product/components/product_detail.dart';
 import 'package:e_commerce_ui/screens/product/components/product_recommend.dart';

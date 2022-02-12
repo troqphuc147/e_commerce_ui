@@ -1,4 +1,4 @@
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 import 'package:e_commerce_ui/screens/product/components/body.dart';
 import 'package:e_commerce_ui/screens/product/components/bottom_button.dart';
 import 'package:e_commerce_ui/size_config.dart';

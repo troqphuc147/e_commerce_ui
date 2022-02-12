@@ -1,4 +1,4 @@
-import 'package:e_commerce_ui/models/Comment.dart';
+import 'package:e_commerce_ui/models/comment.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/comment_dialog.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';

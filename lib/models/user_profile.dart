@@ -1,4 +1,4 @@
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 
 class User {
   String avatar;

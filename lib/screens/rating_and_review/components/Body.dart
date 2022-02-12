@@ -1,4 +1,4 @@
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/comment_view.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/rating_view.dart';
 import 'package:flutter/material.dart';

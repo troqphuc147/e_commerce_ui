@@ -1,7 +1,7 @@
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:e_commerce_ui/components/add_to_bag_button.dart';
 import 'package:e_commerce_ui/constants.dart';
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 import 'package:e_commerce_ui/screens/product/product_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';

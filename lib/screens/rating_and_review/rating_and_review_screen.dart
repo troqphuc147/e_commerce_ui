@@ -1,5 +1,5 @@
 import 'package:e_commerce_ui/constants.dart';
-import 'package:e_commerce_ui/models/Product.dart';
+import 'package:e_commerce_ui/models/product.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/Body.dart';
 import 'package:e_commerce_ui/screens/rating_and_review/components/write_review_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
