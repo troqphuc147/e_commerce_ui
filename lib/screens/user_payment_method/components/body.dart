@@ -1,3 +1,4 @@
+import 'package:e_commerce_ui/screens/user_payment_method/components/add_payment_method_dialog.dart';
 import 'package:e_commerce_ui/screens/user_payment_method/components/master_card.dart';
 import 'package:e_commerce_ui/screens/user_payment_method/components/visa_card.dart';
 import 'package:e_commerce_ui/size_config.dart';
@@ -96,22 +97,8 @@ class _BodyState extends State<Body> {
               margin: EdgeInsets.all(getProportionateScreenWidth(20)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                        height: getProportionateScreenWidth(36),
-                        width: getProportionateScreenWidth(36),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                          size: getProportionateScreenWidth(24),
-                        )),
-                  )
+                children: const [
+                   AddPaymentButton(),
                 ],
               ),
             )
