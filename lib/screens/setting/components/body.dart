@@ -1,5 +1,4 @@
 import 'package:e_commerce_ui/constants.dart';
-import 'package:e_commerce_ui/screens/setting/components/appbar.dart';
 import 'package:e_commerce_ui/screens/setting/components/notifications.dart';
 import 'package:e_commerce_ui/screens/setting/components/password_form.dart';
 import 'package:e_commerce_ui/screens/setting/components/personal_information_form.dart';

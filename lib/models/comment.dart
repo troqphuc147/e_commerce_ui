@@ -1,4 +1,3 @@
-
 class Comment {
   final Customer customer;
   final String comment;

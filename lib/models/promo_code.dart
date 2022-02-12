@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class PromoCode {
   String nameCode;
   String code;

@@ -1,10 +1,7 @@
-import 'package:e_commerce_ui/models/user_profile.dart';
 import 'package:e_commerce_ui/screens/user_shipping_address/components/add_shipping_address_screen.dart';
 import 'package:e_commerce_ui/screens/user_shipping_address/components/shipping_address_list.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../../../constants.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

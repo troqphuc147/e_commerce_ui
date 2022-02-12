@@ -1,8 +1,6 @@
-import 'package:e_commerce_ui/constants.dart';
 import 'package:e_commerce_ui/screens/setting/components/change_password_dialog.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class PasswordForm extends StatefulWidget {
   const PasswordForm({Key? key}) : super(key: key);

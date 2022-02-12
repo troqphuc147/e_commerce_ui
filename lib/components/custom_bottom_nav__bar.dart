@@ -53,22 +53,26 @@ class CustomBottomNavBar extends StatelessWidget {
                       width: getProportionateScreenWidth(30),
                       fit: BoxFit.fitHeight,
                     )),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ShopScreen()));
-                    },
-                    icon: SvgPicture.asset(
-                      "assets/icons/shop.svg",
-                      color: MenuState.shop == selectedMenuState
-                          ? kPrimaryColor
-                          : kPrimarySecondColor,
-                      height: getProportionateScreenWidth(42),
-                      width: SizeConfig.screenWidth * 0.08,
-                      fit: BoxFit.fitHeight,
-                    )),
+                Container(
+                  margin: EdgeInsets.symmetric(
+                      horizontal: getProportionateScreenWidth(10)),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ShopScreen()));
+                      },
+                      icon: SvgPicture.asset(
+                        "assets/icons/shop.svg",
+                        color: MenuState.shop == selectedMenuState
+                            ? kPrimaryColor
+                            : kPrimarySecondColor,
+                        height: getProportionateScreenWidth(42),
+                        width: SizeConfig.screenWidth * 0.08,
+                        fit: BoxFit.fitHeight,
+                      )),
+                ),
                 IconButton(
                     onPressed: () {
                       Navigator.pushReplacement(
@@ -86,6 +90,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       fit: BoxFit.fitHeight,
                     )),
                 IconButton(
+                    iconSize: getProportionateScreenWidth(45),
                     onPressed: () {
                       Navigator.pushReplacement(
                           context,
@@ -98,7 +103,7 @@ class CustomBottomNavBar extends StatelessWidget {
                           ? kPrimaryColor
                           : kPrimarySecondColor,
                       height: getProportionateScreenWidth(42),
-                      width: SizeConfig.screenWidth * 0.112,
+                      width: SizeConfig.screenWidth * 0.15,
                       fit: BoxFit.fitHeight,
                     )),
                 IconButton(
