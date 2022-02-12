@@ -1,5 +1,6 @@
-## Introduction
-This is template ui for e-commerce application.
+
+**This is template ui for e-commerce application.**
+
 ## Some image in template
 1. Authentication.
 
