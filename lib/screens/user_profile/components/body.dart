@@ -3,6 +3,7 @@ import 'package:e_commerce_ui/screens/user_order/user_order_screen.dart';
 import 'package:e_commerce_ui/screens/user_payment_method/user_payment_method_screen.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/main_button.dart';
 import 'package:e_commerce_ui/screens/user_profile/components/user_inforamtion.dart';
+import 'package:e_commerce_ui/screens/user_shipping_address/user_shipping_address_screen.dart';
 import 'package:e_commerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,10 @@ class _BodyState extends State<Body> {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const UserOrderScreen()));
       },
-      () {},
+      () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const UserShippingAddress()));
+      },
       () {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => UserPaymentMethod(index: paymentMethodIndex,)));
